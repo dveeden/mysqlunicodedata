@@ -53,7 +53,7 @@ CREATE TABLE ucd (
     cur.execute("LOAD DATA LOCAL INFILE %s INTO TABLE ucd FIELDS TERMINATED BY ';'", (ucdfn,))
 
     logging.info('Adding column for the real character')
-    cur.execute("ALTER TABLE ucd ADD COLUMN `char` CHAR(4) CHARACTER SET utf8mb4 AFTER value")
+    cur.execute("ALTER TABLE ucd ADD COLUMN `char` CHAR(4) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin AFTER value")
 
     logging.info('Setting the char column to the real character based on the value')
     cur.execute("UPDATE ucd SET `char`=CONVERT(UNHEX(value) USING utf32)")

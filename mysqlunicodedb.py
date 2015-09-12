@@ -47,6 +47,7 @@ CREATE TABLE ucd (
   uppercase_mapping VARCHAR(5),
   lowercase_mapping VARCHAR(5),
   titlecase_mapping VARCHAR(5)
+  /*!50600 ,FULLTEXT KEY `ft_name` (`name`) */
 ) DEFAULT CHARACTER SET latin1""")
 
     logging.info('Loading data from %s into the unicodedata.ucd table', ucdfn)

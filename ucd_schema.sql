@@ -39,6 +39,7 @@ CREATE TABLE `ucd` (
   `uppercase_mapping` varchar(5) DEFAULT NULL,
   `lowercase_mapping` varchar(5) DEFAULT NULL,
   `titlecase_mapping` varchar(5) DEFAULT NULL
+  /*!50600 ,FULLTEXT KEY `ft_name` (`name`) */
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

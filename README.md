@@ -13,6 +13,20 @@ The unicode data in MySQL format.
 
 ![Screenshot](Screenshot_unicodedata.png)
 
+Fonts
+=====
+
+This database contains characters in many different scripts. You might
+want to install additional fonts for each script to be able to
+display the characters.
+
+For example to display emoji fonts on a Linux machine you might want to
+install these:
+
+* google-noto-color-emoji-fonts
+* google-android-emoji-fonts
+* gdouros-symbola-fonts
+
 License
 =======
 
